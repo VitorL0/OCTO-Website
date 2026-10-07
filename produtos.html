@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja — OCTO UFRJ</title>
+  <meta name="description" content="Catálogo de produtos oficiais da equipe OCTO. Peça pelo Instagram ou WhatsApp e retire na sala da equipe.">
+  <link rel="stylesheet" href="produtos.css">
+</head>
+<body>
+
+ <header class="cabecalho" id="cabecalho">
+  <div class="container barra">
+    <a href="index.html" class="logo" aria-label="Página inicial da OCTO">OCTO</a>
+    <button class="botao-menu" id="botaoMenu" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="navegacao" id="navegacao">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">QUEM SOMOS</a></li>
+        <li><a href="#">PROJETOS</a></li>
+        <li><a href="produtos.html" class="ativo">PRODUTOS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+
+    <section class="hero-loja">
+      <div class="container hero-loja-grade">
+        <div class="hero-loja-texto">
+           <img src="img/produtos/logo.webp" alt="OCTO" class="marca-octo">
+          <h1>
+            <span class="hero-loja-titulo">Loja oficial</span>
+          </h1>
+          <p class="hero-texto">Tecnologia projetada para o fundo do mar, feita por estudantes. Toda a receita arrecadada é destinada à investigação, fabrico e desenvolvimento dos protótipos de ROVs da OCTO.</p>
+          <a href="#catalogo" class="botao">Ver catálogo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="numeros" aria-labelledby="comoPedir">
+      <div class="container">
+        <h2 id="comoPedir" class="passos-titulo">Como fazer seu pedido</h2>
+        <div class="grade-numeros">
+          <div class="numero"><strong>1</strong><span>Escolha o produto e o tamanho no catálogo</span></div>
+          <div class="numero"><strong>2</strong><span>Chame a gente no Instagram ou WhatsApp</span></div>
+          <div class="numero"><strong>3</strong><span>Combine o pagamento via Pix</span></div>
+          <div class="numero"><strong>4</strong><span>Retire na sala da equipe</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="destaques container" id="catalogo">
+      <div class="catalogo-topo">
+        <h2 class="titulo-secao">Catálogo</h2>
+        <div class="filtros" id="filtros">
+          <button class="filtro ativo" data-filtro="todos">Todos</button>
+          <button class="filtro" data-filtro="vestuario">Vestuário</button>
+          <button class="filtro" data-filtro="acessorios">Acessórios</button>
+        </div>
+      </div>
+
+      <div class="grade-cards grade-produtos" id="gradeProdutos"></div>
+
+      <p class="aviso-precos">Preços e disponibilidade confirmados no atendimento. Produção sob encomenda pode levar até 15 dias.</p>
+    </section>
+
+    <section class="retirada">
+      <div class="container retirada-conteudo">
+        <h2 class="titulo-secao">Onde retirar</h2>
+        <p>Não fazemos entregas: todos os pedidos são retirados direto na sala da equipe, sem custo de frete.</p>
+        <ul class="retirada-info">
+          <li><strong>Local</strong><span>Sala da equipe OCTO · Centro de Tecnologia, Bloco I · UFRJ</span></li>
+          <li><strong>Horário</strong><span>Segunda a sexta, das 12h às 14h</span></li>
+          <li><strong>Pagamento</strong><span>Pix, combinado na conversa antes da retirada</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="chamada">
+      <div class="container chamada-conteudo">
+        <h2>Bora fazer seu pedido?</h2>
+        <p>Manda uma mensagem com o produto, o tamanho e a quantidade. A gente responde e separa o seu.</p>
+        <div class="chamada-botoes">
+          <a href="#" class="botao botao-claro" data-whatsapp>WhatsApp</a>
+          <a href="#" class="botao botao-contorno" data-instagram target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container grade-rodape">
+      <div>
+        <p class="logo logo-rodape">OCTO</p>
+        <p>Equipe de robótica subaquática formada por estudantes de Engenharia.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#" data-construcao>Quem somos</a></li>
+          <li><a href="#" data-construcao>Projetos</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:contato@equipeocto.com.br">contato@equipeocto.com.br</a></li>
+          <li><a href="#" data-instagram target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#" data-whatsapp target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <p>&copy; <span id="anoAtual"></span> Equipe OCTO. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Detalhe do produto -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-fundo" data-fechar></div>
+    <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modalNome">
+      <button class="modal-fechar" data-fechar aria-label="Fechar">&times;</button>
+      <div class="modal-grade">
+        <div>
+          <img id="modalFoto" class="modal-foto" alt="">
+          <div class="modal-miniaturas" id="modalMiniaturas"></div>
+        </div>
+        <div class="modal-info">
+          <p class="modal-categoria" id="modalCategoria"></p>
+          <h3 id="modalNome"></h3>
+          <p class="modal-aviso-encomenda" id="modalAvisoEncomenda">Feito sob encomenda</p>
+          <p class="preco" id="modalPreco"></p>
+          <p id="modalDescricao"></p>
+          <div id="modalTamanhosBloco">
+            <p class="rotulo">Tamanho</p>
+            <div class="tamanhos" id="modalTamanhos"></div>
+        </div>
+    <div class="modal-botoes">
+    <a href="#" class="botao" id="modalWhatsapp" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+    <a href="#" class="botao botao-roxo" data-instagram target="_blank" rel="noopener">Pedir no Instagram</a>
+  </div>
+  <p class="modal-nota">Retirada na sala da equipe · Pagamento via Pix</p>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao topo">&#8679;</button>
+
+  <script src="produtos.js"></script>
+</body>
+</html>
